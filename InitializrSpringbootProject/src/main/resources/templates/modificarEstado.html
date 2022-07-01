@@ -3,8 +3,12 @@
     <head>
         <title>EstadoPaises</title>
         <meta charset="UTF-8">
+        <link href="../static2/css/estilo1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+
+        <header th:replace="layout/header :: header" />
+
         <h1>Datos Paises</h1>
         <a th:href="@{/}">Regresar</a>
         <br> 
@@ -16,24 +20,26 @@
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" th:field="*{nombre}"/>
             <br/>
-                <!-- el label se asocia al input -->
-                <label for="continente">Continente: </label>
+            <!-- el label se asocia al input -->
+            <label for="continente">Continente: </label>
             <input type="text" id="continente" name="continente" th:field="*{continente}"/>
-            <br>
-                <!-- el label se asocia al input -->
-                <label for="capital">Capital: </label>
+            <br/>
+            <!-- el label se asocia al input -->
+            <label for="capital">Capital: </label>
             <input type="text" id="capital" name="capital" th:field="*{capital}"/>
-            <br>
-                <!-- el label se asocia al input -->
-                <label for="poblacion">Poblacion: </label>
+            <br/>
+            <!-- el label se asocia al input -->
+            <label for="poblacion">Poblacion: </label>
             <input type="text" id="poblacion" name="poblacion" th:field="*{poblacion}"/>
-            <br>
-                <label for="extensionTerritorio">Extension Territorio: </label>
+            <br/>
+            <label for="extensionTerritorio">Extension Territorio: </label>
             <input type="text" id="extensionTerritorio" name="extensionTerritorio" th:field="*{extensionTerritorio}"/>
-            <br>
-                <!-- el label se asocia al input -->
-                <input type="submit" name="Guadar" value="Guardar" />
+            <br/>
+            <!-- el label se asocia al input -->
+            <input type="submit" name="Guadar" value="Guardar" />
         </form>  
+
+        <footer th:replace="layout/footer :: footer"/>
+
     </body>   
-    </body>
 </html>
